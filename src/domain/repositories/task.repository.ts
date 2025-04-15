@@ -1,6 +1,7 @@
-import { Task } from '../entities/task.entity';
+import { Task, TaskStatus } from '../entities/task.entity';
 
 export interface TaskRepository {
   create(task: Task): Promise<void>;
-  findById(id: string): Promise<Task | null>;
+  updateStatus(id: string, status: TaskStatus): Promise<void>;
+  findByStatus(status: TaskStatus): Promise<Task[]>;
 }

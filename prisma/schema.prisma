@@ -13,7 +13,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Task{
-  id String @id @default(uuid())
-  title String
+model Task {
+  id        String   @id @default(uuid())
+  title     String
+  status    TaskStatus @default(BACKLOG)
+  createdAt DateTime @default(now())
+}
+
+enum TaskStatus {
+  BACKLOG
+  DOING
+  DONE
 }
