@@ -1,4 +1,4 @@
-export type TaskStatus = 'BACKLOG' | 'DOING' | 'DONE';
+export type TaskStatus = 'BACKLOG' | 'DOING' | 'DONE' | 'TRASH';
 
 export class Task {
   constructor(

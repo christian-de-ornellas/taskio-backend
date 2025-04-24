@@ -24,7 +24,6 @@ export class TaskController {
   constructor(private readonly taskRepository: TaskRepositoryPrisma) {
     this.createTaskUseCase = new CreateTaskUseCase(taskRepository);
     this.updateTaskStatus = new UpdateTaskStatusUseCase(taskRepository);
-
   }
 
   @Post()

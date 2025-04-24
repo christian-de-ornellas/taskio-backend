@@ -24,4 +24,5 @@ enum TaskStatus {
   BACKLOG
   DOING
   DONE
+  TRASH
 }
